@@ -6,7 +6,7 @@
         {
             Console.WriteLine("Welcome to Basic Core Programs.");
 
-            Console.WriteLine("Select option \n1.Flip Coin \n2.Leap Year \n3.Power of 2 \n4.Harmonic Number \n5.Factors");
+            Console.WriteLine("Select option \n1.Flip Coin \n2.Leap Year \n3.Power of 2 \n4.Harmonic Number \n5.Factors \n6.Quotient Remainder");
             int opt = Convert.ToInt32(Console.ReadLine());
             switch(opt)
             {
@@ -19,6 +19,8 @@
                 case 4: HarmonicNo.HarmonicNumber();
                     break;
                 case 5: Factors.PrimeFactors();
+                    break;
+                case 6: QuotientRemainder.QuotRemainder();
                     break;
                 default: Console.WriteLine("Invalid Choice");
                     break;
@@ -167,6 +169,24 @@
                         Console.WriteLine("{0} is a prime factor. ", i);
                     }
                 }
+            }
+        }
+
+        public class QuotientRemainder
+        {
+            public static void QuotRemainder()
+            {
+                int quotient, remainder;
+
+                Console.WriteLine("Enter a number to be divided ");
+                int num = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Enter divisor :");
+                int d = Convert.ToInt32(Console.ReadLine());
+
+                quotient = num / d;
+                remainder = num % d;
+
+                Console.WriteLine($"The quotient is {quotient} and remainder is {remainder}");
             }
         }
     }
