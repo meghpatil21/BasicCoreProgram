@@ -6,13 +6,15 @@
         {
             Console.WriteLine("Welcome to Basic Core Programs.");
 
-            Console.WriteLine("Select option \n1.Flip Coin \n2.Leap Year");
+            Console.WriteLine("Select option \n1.Flip Coin \n2.Leap Year \n3.Power of 2");
             int opt = Convert.ToInt32(Console.ReadLine());
             switch(opt)
             {
                 case 1: FlipCoin.CoinFlip();
                     break;
                 case 2: LeapYear.LeapYr();
+                    break;
+                case 3: PowerOfTwo.PwrOfTwo();
                     break;
 
                 default: Console.WriteLine("Invalid Choice");
@@ -94,6 +96,31 @@
 
                 }
 
+            }
+        }
+
+        public class PowerOfTwo
+        {
+            public static void PwrOfTwo()
+            {
+                int num = 2;
+                int power = 1;
+                int i = 1;
+                Console.WriteLine("Enter the Power: ");
+                int p = Convert.ToInt32(Console.ReadLine());
+
+                if (p >= 0 && p < 31)
+                {
+                    for (i = 1; i <= p; i++)
+                    {
+                        power = power * num;
+                        Console.WriteLine(power);
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Please enter power between 0-31");
+                }
             }
         }
     }
