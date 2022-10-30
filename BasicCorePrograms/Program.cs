@@ -6,7 +6,7 @@
         {
             Console.WriteLine("Welcome to Basic Core Programs.");
 
-            Console.WriteLine("Select option \n1.Flip Coin \n2.Leap Year \n3.Power of 2 \n4.Harmonic Number \n5.Factors \n6.Quotient Remainder");
+            Console.WriteLine("Select option \n1.Flip Coin \n2.Leap Year \n3.Power of 2 \n4.Harmonic Number \n5.Factors \n6.Quotient Remainder \n7.Swap Number");
             int opt = Convert.ToInt32(Console.ReadLine());
             switch(opt)
             {
@@ -21,6 +21,8 @@
                 case 5: Factors.PrimeFactors();
                     break;
                 case 6: QuotientRemainder.QuotRemainder();
+                    break;
+                case 7: SwapNumber.SwapTwoNo();
                     break;
                 default: Console.WriteLine("Invalid Choice");
                     break;
@@ -187,6 +189,25 @@
                 remainder = num % d;
 
                 Console.WriteLine($"The quotient is {quotient} and remainder is {remainder}");
+            }
+        }
+
+        public class SwapNumber
+        {
+            public static void SwapTwoNo()
+            {
+                Console.WriteLine("Enter 1st number: ");
+                int num1 = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Enter 2nd number: ");
+                int num2 = Convert.ToInt32(Console.ReadLine());
+
+                int temp = num1;
+
+                num1 = num2;
+                num2 = temp;
+
+                Console.WriteLine("Your 1st number is: " + num1);
+                Console.WriteLine("Your 2nd number is: " + num2);
             }
         }
     }
