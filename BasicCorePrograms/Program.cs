@@ -6,7 +6,7 @@
         {
             Console.WriteLine("Welcome to Basic Core Programs.");
 
-            Console.WriteLine("Select option \n1.Flip Coin \n2.Leap Year \n3.Power of 2 \n4.Harmonic Number \n5.Factors \n6.Quotient Remainder \n7.Swap Number");
+            Console.WriteLine("Select option \n1.Flip Coin \n2.Leap Year \n3.Power of 2 \n4.Harmonic Number \n5.Factors \n6.Quotient Remainder \n7.Swap Number \n8.Even Odd");
             int opt = Convert.ToInt32(Console.ReadLine());
             switch(opt)
             {
@@ -23,6 +23,8 @@
                 case 6: QuotientRemainder.QuotRemainder();
                     break;
                 case 7: SwapNumber.SwapTwoNo();
+                    break;
+                case 8: EvenOdd.OddEven();
                     break;
                 default: Console.WriteLine("Invalid Choice");
                     break;
@@ -208,6 +210,24 @@
 
                 Console.WriteLine("Your 1st number is: " + num1);
                 Console.WriteLine("Your 2nd number is: " + num2);
+            }
+        }
+
+        public class EvenOdd
+        {
+            public static void OddEven()
+            {
+                Console.WriteLine("Enter a Number to check odd or even: ");
+                int num = Convert.ToInt32(Console.ReadLine());
+
+                if (num % 2 == 0)
+                {
+                    Console.WriteLine($"{num} is even.");
+                }
+                else
+                {
+                    Console.WriteLine($"{num} is odd.");
+                }
             }
         }
     }
