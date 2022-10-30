@@ -6,7 +6,7 @@
         {
             Console.WriteLine("Welcome to Basic Core Programs.");
 
-            Console.WriteLine("Select option \n1.Flip Coin \n2.Leap Year \n3.Power of 2 \n4.Harmonic Number \n5.Factors \n6.Quotient Remainder \n7.Swap Number \n8.Even Odd \n9.Vowel Consonant");
+            Console.WriteLine("Select option \n1.Flip Coin \n2.Leap Year \n3.Power of 2 \n4.Harmonic Number \n5.Factors \n6.Quotient Remainder \n7.Swap Number \n8.Even Odd \n9.Vowel Consonant \n10.Largest Number");
             int opt = Convert.ToInt32(Console.ReadLine());
             switch(opt)
             {
@@ -27,6 +27,8 @@
                 case 8: EvenOdd.OddEven();
                     break;
                 case 9: VowelConsonant.VowelConson();
+                    break;
+                case 10: LargestNumber.LargestNo();
                     break;
                 default: Console.WriteLine("Invalid Choice");
                     break;
@@ -260,6 +262,38 @@
                     default:
                         Console.WriteLine("The Alphabet is not a vowel");
                         break;
+                }
+            }
+        }
+
+        public class LargestNumber
+        {
+            public static void LargestNo()
+            {
+                Console.WriteLine("Welcome to Three Number Comparator");
+                Console.WriteLine();
+                Console.WriteLine("Enter 1st no: ");
+                int n1 = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Enter 2nd no: ");
+                int n2 = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Enter 3rd no: ");
+                int n3 = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine();
+
+                if (n1 > n2 && n1 > n3)
+                {
+                    Console.WriteLine("Largest number is " + n1);
+                }
+
+                else if (n2 > n3)
+                {
+                    Console.WriteLine("Largest number is " + n2);
+                }
+                else
+                {
+                    Console.WriteLine("Largest number is " + n3);
                 }
             }
         }
