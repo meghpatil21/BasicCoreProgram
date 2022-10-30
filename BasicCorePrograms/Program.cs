@@ -6,7 +6,7 @@
         {
             Console.WriteLine("Welcome to Basic Core Programs.");
 
-            Console.WriteLine("Select option \n1.Flip Coin \n2.Leap Year \n3.Power of 2 \n4.Harmonic Number");
+            Console.WriteLine("Select option \n1.Flip Coin \n2.Leap Year \n3.Power of 2 \n4.Harmonic Number \n5.Factors");
             int opt = Convert.ToInt32(Console.ReadLine());
             switch(opt)
             {
@@ -18,7 +18,8 @@
                     break;
                 case 4: HarmonicNo.HarmonicNumber();
                     break;
-
+                case 5: Factors.PrimeFactors();
+                    break;
                 default: Console.WriteLine("Invalid Choice");
                     break;
 
@@ -142,6 +143,30 @@
                 }
 
                 Console.WriteLine("Harmonic Number is " + harNo);
+            }
+        }
+
+        public class Factors
+        {
+            public static void PrimeFactors()
+            {
+                Console.WriteLine("Enter non-prime Number: ");
+                int n = Convert.ToInt32(Console.ReadLine());
+
+                int i;
+                for (i = 2; i * i <= n; i++)
+                {
+                    if (n % i == 0)
+                    {
+
+                        while (n % i == 0)
+                        {
+                            n = n / i;
+
+                        }
+                        Console.WriteLine("{0} is a prime factor. ", i);
+                    }
+                }
             }
         }
     }
