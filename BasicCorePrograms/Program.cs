@@ -6,7 +6,7 @@
         {
             Console.WriteLine("Welcome to Basic Core Programs.");
 
-            Console.WriteLine("Select option \n1.Flip Coin \n2.Leap Year \n3.Power of 2");
+            Console.WriteLine("Select option \n1.Flip Coin \n2.Leap Year \n3.Power of 2 \n4.Harmonic Number");
             int opt = Convert.ToInt32(Console.ReadLine());
             switch(opt)
             {
@@ -15,6 +15,8 @@
                 case 2: LeapYear.LeapYr();
                     break;
                 case 3: PowerOfTwo.PwrOfTwo();
+                    break;
+                case 4: HarmonicNo.HarmonicNumber();
                     break;
 
                 default: Console.WriteLine("Invalid Choice");
@@ -121,6 +123,25 @@
                 {
                     Console.WriteLine("Please enter power between 0-31");
                 }
+            }
+        }
+
+        public class HarmonicNo
+        {
+            public static void HarmonicNumber()
+            {
+                Console.WriteLine("Which Harmonic Number you want: ");
+                int n = Convert.ToInt32(Console.ReadLine());
+
+                int i = 1;
+                decimal harNo = 0;
+
+                for (i = 1; i <= n; i++)
+                {
+                    harNo = harNo + (1 / (decimal)i);
+                }
+
+                Console.WriteLine("Harmonic Number is " + harNo);
             }
         }
     }
