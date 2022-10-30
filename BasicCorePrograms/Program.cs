@@ -6,7 +6,7 @@
         {
             Console.WriteLine("Welcome to Basic Core Programs.");
 
-            Console.WriteLine("Select option \n1.Flip Coin \n2.Leap Year \n3.Power of 2 \n4.Harmonic Number \n5.Factors \n6.Quotient Remainder \n7.Swap Number \n8.Even Odd");
+            Console.WriteLine("Select option \n1.Flip Coin \n2.Leap Year \n3.Power of 2 \n4.Harmonic Number \n5.Factors \n6.Quotient Remainder \n7.Swap Number \n8.Even Odd \n9.Vowel Consonant");
             int opt = Convert.ToInt32(Console.ReadLine());
             switch(opt)
             {
@@ -25,6 +25,8 @@
                 case 7: SwapNumber.SwapTwoNo();
                     break;
                 case 8: EvenOdd.OddEven();
+                    break;
+                case 9: VowelConsonant.VowelConson();
                     break;
                 default: Console.WriteLine("Invalid Choice");
                     break;
@@ -227,6 +229,37 @@
                 else
                 {
                     Console.WriteLine($"{num} is odd.");
+                }
+            }
+        }
+
+        public class VowelConsonant
+        {
+            public static void VowelConson()
+            {
+                Console.Write("Input an Alphabet: ");
+                char ch = Convert.ToChar(Console.ReadLine().ToUpper());
+
+                switch (ch)
+                {
+                    case 'A':
+                        Console.WriteLine("The Alphabet is vowel");
+                        break;
+                    case 'I':
+                        Console.WriteLine("The Alphabet is vowel");
+                        break;
+                    case 'O':
+                        Console.WriteLine("The Alphabet is vowel");
+                        break;
+                    case 'U':
+                        Console.WriteLine("The Alphabet is vowel");
+                        break;
+                    case 'E':
+                        Console.WriteLine("The Alphabet is vowel");
+                        break;
+                    default:
+                        Console.WriteLine("The Alphabet is not a vowel");
+                        break;
                 }
             }
         }
